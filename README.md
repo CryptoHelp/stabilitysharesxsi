@@ -11,7 +11,7 @@ sudo apt-get install qrencode libqrencode-dev
 
 Qt v4.8.5 is what we used to compile StabilityShares.
 
-Ubuntu Compile stabilitysharesxsid
+Compiling daemon on ubuntu
 ========================
 cd ~
 
@@ -37,7 +37,7 @@ mkdir obj
 Then try compiling again.
 
 
-Ubuntu Compile stabilityshares-qt
+Compiling QT Wallet on ubuntu
 ========================
 
 git clone git://github.com/stabilityshares/stabilitysharesxsi.git
