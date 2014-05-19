@@ -19,7 +19,7 @@ git clone git://github.com/stabilityshares/stabilitysharesxsi.git
 
 cd stabilitysharesxsi/src
 
-chmod 777 /leveldb/build_detect_platform
+chmod 777 ./leveldb/build_detect_platform
 
 make -f makefile.unix USE_UPNP=-
 
@@ -46,6 +46,8 @@ Compiling QT Wallet on ubuntu
 git clone git://github.com/stabilityshares/stabilitysharesxsi.git
 
 cd stabilitysharesxsi
+
+chmod 777 ./src/leveldb/build_detect_platform
 
 qmake "USE_UPNP=-" stabilityshares-qt.pro
 
