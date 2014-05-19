@@ -3,6 +3,56 @@ StabilityShares development tree
 
 StabilityShares is a PoS-based cryptocurrency.
 
+Ubuntu Dependencies
+===================
+sudo apt-get install build-essential libboost-all-dev libcurl4-openssl-dev libdb4.8-dev libdb4.8++-dev git qt-sdk libminiupnpc-dev
+
+sudo apt-get install qrencode libqrencode-dev 
+
+Qt v4.8.5 is what we used to compile StabilityShares.
+
+Ubuntu Compile stabilitysharesxsid
+========================
+cd ~
+
+git clone git://github.com/stabilityshares/stabilitysharesxsi.git
+cd stabilitysharesxsi/src
+chmod 777 /leveldb/build_detect_platform
+make -f makefile.unix USE_UPNP=-
+
+sudo cp stabilitysharesxsid /usr/bin
+
+
+When trying to compile if you get this error: "../share/genbuild.sh: 34: ../share/genbuild.sh: cannot create obj/build.h: Directory nonexistent
+make: *** [obj/build.h] Error "
+
+Make sure to create the folder "obj" in the "src" folder:
+
+cd stabilityshares/src
+
+If Root: cd ~stabilityshares/src
+
+mkdir obj
+
+Then try compiling again.
+
+
+Ubuntu Compile stabilityshares-qt
+========================
+
+git clone git://github.com/stabilityshares/stabilitysharesxsi.git
+cd stabilitysharesxsi
+qmake "USE_UPNP=-" stabilityshares-qt.pro
+make
+
+Use make clean first if you have already built the daemon
+
+Links
+======
+
+Website: http://www.stabilityshares.com
+
+
 Development process
 ===========================
 
