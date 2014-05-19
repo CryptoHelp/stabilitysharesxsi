@@ -16,8 +16,11 @@ Compiling daemon on ubuntu
 cd ~
 
 git clone git://github.com/stabilityshares/stabilitysharesxsi.git
+
 cd stabilitysharesxsi/src
+
 chmod 777 /leveldb/build_detect_platform
+
 make -f makefile.unix USE_UPNP=-
 
 sudo cp stabilitysharesxsid /usr/bin
@@ -41,8 +44,11 @@ Compiling QT Wallet on ubuntu
 ========================
 
 git clone git://github.com/stabilityshares/stabilitysharesxsi.git
+
 cd stabilitysharesxsi
+
 qmake "USE_UPNP=-" stabilityshares-qt.pro
+
 make
 
 Use make clean first if you have already built the daemon
