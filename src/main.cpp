@@ -971,7 +971,7 @@ int64_t GetProofOfWorkReward(int nHeight,int64_t nFees)
 	
 	if(nHeight == 1)	// Creates an initial block for currency exchange with old XSS
 		{
-		  nSubsidy = 4200000 * COIN;
+		  nSubsidy = 4167410 * COIN;
 		}
 		else if(nHeight < 101) // First 100 blocks reward 10 * COIN to allow fair network start
 		{
@@ -980,7 +980,7 @@ int64_t GetProofOfWorkReward(int nHeight,int64_t nFees)
 		else if(nHeight > 100)
 		{
 		double dFactor = (1 / ( 1 + ( 0.000000072141 * pow( nHeight , 2.00 ) ) ) ); // Formula creates hyperbolic curve, using the current blockheight. Delivers 7.5 million coins in 14 days. Total 13440 blocks, 960 per day.
-		nSubsidy = 1549 * dFactor * COIN;    // First PoW block mined will reward 3099 XSI. Last PoW block mined will reward ~220 XSI
+		nSubsidy = 689 * dFactor * COIN;    // First PoW block mined will reward 688 XSI. Last PoW block mined will reward ~49 XSI
 		}
 
     if (fDebug && GetBoolArg("-printcreation"))
